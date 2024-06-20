@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Contact Form #7</title>
+  </head>
+  <body>
+  
+  <div class="content">
+    
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+       
+          <div class="form h-100">
+            <h3>Police FIR Portal</h3>
+            <form id="csvForm" action="/upload_csv" method="post">
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                    <label for="districtName" class="col-form-label">District Name *</label>
+                    <input type="text" class="form-control" id="districtName" name="districtName" required placeholder="District Name">
+                </div>
+                
+              <div class="col-md-6 form-group mb-5">
+                <label for="unitName" class="col-form-label">Unit Name *</label>
+                <input type="text" class="form-control" id="unitName" name="unitName" required placeholder="Unit Name">
+            </div>
+                
+              <div class="col-md-6 form-group mb-5">
+                <label for="Name" class="col-form-label">Name *</label>
+                <input type="text" class="form-control" id="Name" name="Name" required placeholder="Name">
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="PersonNO" class="col-form-label">Person No *</label>
+                <input type="number" class="form-control" id="PersonNO" name="PersonNO" required>
+            </div>
+            
+              <div class="col-md-6 form-group mb-5">
+                <label for="Sex" class="col-form-label">Sex *</label>
+                <select class="form-control" id="Sex" name="Sex" required>
+                    <option value="" disabled selected>Select Sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+         
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Locality" class="col-form-label">Locality *</label>
+                  <input type="text" class="form-control" id="Locality" name="Locality" required>
+              </div>
+              
+              
+            <div class="col-md-6 form-group mb-5">
+                <label for="MobileNO" class="col-form-label">Mobile No *</label>
+                <input type="number" class="form-control" id="MobileNO" name="MobileNO" required>
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="DOB" class="col-form-label">Date Of Birth *</label>
+                <input type="date" class="form-control" id="DOB" name="DOB" required>
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="Address" class="col-form-label">Address *</label>
+                <textarea class="form-control" id="Address" name="Address" required placeholder="Address" rows="2" cols="50"></textarea>
+            </div>
+            <div class="col-md-6 form-group mb-5">
+                <label for="Caste" class="col-form-label">Caste *</label>
+                <input type="text" class="form-control" id="Caste" name="Caste" required placeholder="Caste">
+            </div>
+            <div class="col-md-6 form-group mb-5">
+                <label for="Profession" class="col-form-label">Profession *</label>
+                <input type="text" class="form-control" id="Profession" name="Profession" required placeholder="Profession">
+            </div>
+            <div class="col-md-6 form-group mb-5">
+                <label for="Grading" class="col-form-label">Grading *</label>
+                <input type="text" class="form-control" id="Grading" name="Grading" required >
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="District" class="col-form-label">PS District *</label>
+                <input type="text" class="form-control" id="District" name="District" required>
+            </div>
+
+            <div class="col-md-6 form-group mb-5">
+                <label for="Native" class="col-form-label">PS Native *</label>
+                <input type="text" class="form-control" id="Native" name="Native" required>
+            </div>
+
+            <div class="col-md-6 form-group mb-5">
+                <label for="offClass" class="col-form-label">Offender Class *</label>
+                <input type="text" class="form-control" id="offClass" name="offClass" required>
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="CrimeNo" class="col-form-label">Crime No *</label>
+                <input type="number" class="form-control" id="CrimeNo" name="CrimeNo" required>
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="ActSect" class="col-form-label">Act Section No *</label>
+                <input type="text" class="form-control" id="ActSect" name="ActSect" required>
+            </div>
+
+            <div class="col-md-6 form-group mb-5">
+                <label for="Gang" class="col-form-label">Gang Strength *</label>
+                <input type="number" class="form-control" id="Gang" name="Gang" required>
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="Brief_fact" class="col-form-label">Brief Description *</label>
+                <textarea class="form-control" id="Brief_fact" name="Brief_fact" required placeholder="Description" rows="3" cols="50"></textarea>
+            </div>
+
+            <div class="col-md-6 form-group mb-5">
+                <label for="Ident_Officer" class="col-form-label">Officer Identified *</label>
+                <input type="text" class="form-control" id="Ident_Officer" name="Ident_Officer" required>
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="OfficerRank" class="col-form-label">Officer Rank *</label>
+                <input type="number" class="form-control" id="OfficerRank" name="OfficerRank" required>
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="CrimeGrp1" class="col-form-label">Crime Group 1 *</label>
+                <input type="text" class="form-control" id="CrimeGrp1" name="CrimeGrp1" required>
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="Crimehead2" class="col-form-label">Crime Head 2 *</label>
+                <input type="text" class="form-control" id="Crimehead2" name="Crimehead2" required>
+            </div>
+
+              <div class="col-md-6 form-group mb-5">
+                <label for="MobOpenDate" class="col-form-label">MOB Open Date *</label>
+                <input type="date" class="form-control" id="MobOpenDate" name="MobOpenDate" required >
+            </div>
+
+            <div class="col-md-6 form-group mb-5">
+                <label for="'MobOpenYear'" class="col-form-label">MOB Open Year *</label>
+                <input type="number" class="form-control" id="MobOpenYear" name="MobOpenYear" required >
+            </div>
+
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="'ArrestedBy'" class="col-form-label">Arrested By *</label>
+                <input type="text" class="form-control" id="ArrestedBy" name="ArrestedBy" required >
+            </div>
+
+            <div class="col-md-6 form-group mb-5">
+                  <label for="KGID" class="col-form-label">KGID *</label>
+                  <input type="text" class="form-control" id="KGID" name="KGID" required >
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="LastUpdatedDate" class="col-form-label">Last Updated Date *</label>
+                  <input type="date" class="form-control" id="LastUpdatedDate" name="LastUpdatedDate" required>
+              </div>
+              
+            
+              <div class="col-md-12 form-group mb-5">
+                  <input type="submit" class="btn btn-primary" value="Submit">
+              </div>              
+          </div>
+
+      </div>
+    </div>
+
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

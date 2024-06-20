@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Contact Form #7</title>
+  </head>
+  <body>
+  
+  <div class="content">
+    
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+       
+          <div class="form h-100">
+            <h3>Police FIR Portal</h3>
+            <form id="csvForm" action="/upload_csv" method="post">
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="districtName" class="col-form-label">District Name *</label>
+                  <input type="text" class="form-control" id="districtName" name="districtName" required placeholder="District Name">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="unitName" class="col-form-label">Unit Name *</label>
+                  <input type="text" class="form-control" id="unitName" name="unitName" required placeholder="Unit Name">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="firNo" class="col-form-label">FIR No *</label>
+                  <input type="text" class="form-control" id="firNo" name="firNo" required placeholder="FIR No">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="ri" class="col-form-label">RI *</label>
+                  <input type="number" class="form-control" id="ri" name="ri" required placeholder="RI">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Crime_No" class="col-form-label">Crime No *</label>
+                  <input type="text" class="form-control" id="Crime_No" name="Crime_No" required placeholder="Crime_No">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="year" class="col-form-label">Year *</label>
+                  <input type="number" class="form-control" id="year" name="year" required placeholder="year">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="vehicles" class="col-form-label">No of vehicles involved *</label>
+                  <input type="number" class="form-control" id="vehicles" name="vehicles" required>
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Accident_Spot" class="col-form-label">Accident Spot *</label>
+                  <input type="text" class="form-control" id="Accident_Spot" name="Accident_Spot" required>
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="cause" class="col-form-label">Main Cause *</label>
+                  <input type="text" class="form-control" id="cause" name="cause" required>
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Severity" class="col-form-label">Severity *</label>
+                  <input type="number" class="form-control" id="Severity" name="Severity" required>
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Road_Type" class="col-form-label">Road Type *</label>
+                  <input type="text" class="form-control" id="Road_Type" name="Road_Type" required placeholder="Road Type">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Surface_Condition" class="col-form-label">Surface Condition *</label>
+                  <input type="text" class="form-control" id="Surface_Condition" name="Surface_Condition" required placeholder="Surface Condition">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Weather" class="col-form-label">Weather *</label>
+                  <input type="text" class="form-control" id="Weather" name="Weather" required placeholder="Weather">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Lane_Type" class="col-form-label">Lane Type *</label>
+                  <input type="text" class="form-control" id="Lane_Type" name="Lane_Type" required placeholder="Lane Type">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Spot_Conditions" class="col-form-label">Spot Conditions *</label>
+                  <input type="text" class="form-control" id="Spot_Conditions" name="Spot_Conditions" required placeholder="Spot_Conditions">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Side_Walk" class="col-form-label">Side Walk *</label>
+                  <input type="text" class="form-control" id="Side_Walk" name="Side_Walk" required placeholder="Side Walk">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Collision_TypeB" class="col-form-label">Collision TypeB *</label>
+                  <input type="text" class="form-control" id="Collision_TypeB" name="Collision_TypeB" required >
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Accident_Road" class="col-form-label">Accident Road *</label>
+                  <input type="text" class="form-control" id="Accident_Road" name="Accident_Road" required placeholder="Accident Road">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Landmark_first" class="col-form-label">Landmark First *</label>
+                  <input type="text" class="form-control" id="Landmark_first" name="Landmark_first" required placeholder="Landmark first">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="landmark_second" class="col-form-label">landmark Second *</label>
+                  <input type="text" class="form-control" id="landmark_second" name="landmark_second" required placeholder="landmark Second">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Latitude" class="col-form-label">Latitude *</label>
+                  <input type="text" class="form-control" id="Latitude" name="Latitude" required placeholder="Latitude">
+              </div>
+
+              <div class="col-md-6 form-group mb-5">
+                <label for="Longitude" class="col-form-label">Longitude *</label>
+                <input type="text" class="form-control" id="Longitude" name="Longitude" required placeholder="Longitude">
+                </div>
+
+                <div class="col-md-6 form-group mb-5">
+                    <label for="Accident_Description" class="col-form-label">Accident Description *</label>
+                    <textarea class="form-control" id="Accident_Description" name="Accident_Description" required placeholder="Description" rows="3" cols="50"></textarea>
+                </div>
+                
+              <div class="col-md-12 form-group mb-5">
+                  <input type="submit" class="btn btn-primary" value="Submit">
+              </div>              
+          </div>
+
+      </div>
+    </div>
+
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .file-upload {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .file-select {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px dashed #ccc;
+            padding: 20px;
+            cursor: pointer;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .file-select-button {
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .file-select-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .file-select-name {
+            margin-top: 10px;
+        }
+
+        #uploadButton {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #uploadButton:hover {
+            background-color: #0056b3;
+        }
+
+        .upload-progress {
+            margin-top: 10px;
+            width: 100%;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 20px;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            padding: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .progress-graphics {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .progress-graphic {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="{{ url_for('ocr_form') }}" method="post">
+        <div class="file-upload">
+            <label for="chooseFile" class="file-select">
+                <div class="file-select-button">Choose File</div>
+                <div class="file-select-name">No file chosen...</div>
+            </label>
+            <input type="file" id="chooseFile" style="display: none;">
+            <button id="uploadButton">Upload</button>
+            <div class="upload-progress">
+                <div class="progress-bar"></div>
+                <div class="progress-text">0%</div>
+                <div class="progress-graphics">
+                    <div class="progress-graphic"></div>
+                    <div class="progress-graphic"></div>
+                    <div class="progress-graphic"></div>
+                    <div class="progress-graphic"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+        <script>
+            document.getElementById('chooseFile').addEventListener('change', function () {
+                var filename = this.value.split('\\').pop();
+                var fileSelectName = document.querySelector('.file-select-name');
+                fileSelectName.textContent = filename;
+            });
+
+            document.getElementById('uploadButton').addEventListener('click', function () {
+                var fileInput = document.getElementById('chooseFile');
+                if (fileInput.files.length > 0) {
+                    var file = fileInput.files[0];
+                    var formData = new FormData();
+                    formData.append('file', file);
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', 'upload.php', true);
+
+                    xhr.upload.onprogress = function (e) {
+                        if (e.lengthComputable) {
+                            var percentComplete = (e.loaded / e.total) * 100;
+                            var uploadProgress = document.querySelector('.upload-progress');
+                            var progressBar = document.querySelector('.progress-bar');
+                            var progressText = document.querySelector('.progress-text');
+                            progressBar.style.width = percentComplete.toFixed(0) + '%';
+                            progressText.textContent = percentComplete.toFixed(0) + '%';
+                            uploadProgress.style.display = 'block';
+                            updateProgressGraphics(percentComplete);
+                        }
+                    };
+
+                    xhr.onload = function () {
+                        if (xhr.status === 200) {
+                            alert('File uploaded successfully!');
+                        } else {
+                            alert('Error uploading file. Please try again.');
+                        }
+                    };
+
+                    xhr.send(formData);
+                } else {
+                    alert('Please choose a file to upload.');
+                }
+            });
+
+            function updateProgressGraphics(percentComplete) {
+                var graphics = document.querySelectorAll('.progress-graphic');
+                var numGraphics = graphics.length;
+                var numActive = Math.floor((percentComplete / 100) * numGraphics);
+                graphics.forEach(function (graphic, index) {
+                    if (index < numActive) {
+                        graphic.classList.add('active');
+                    } else {
+                        graphic.classList.remove('active');
+                    }
+                });
+            }
+        </script>
+</body>
+
+</html>

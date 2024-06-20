@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Contact Form #7</title>
+  </head>
+  <body>
+  
+  <div class="content">
+    
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+       
+          <div class="form h-100">
+            <h3>Police FIR Portal</h3>
+            <form id="csvForm" action="/upload_csv" method="post">
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                    <label for="districtName" class="col-form-label">District Name *</label>
+                    <input type="text" class="form-control" id="districtName" name="districtName" required placeholder="District Name">
+                </div>
+                
+              <div class="col-md-6 form-group mb-5">
+                <label for="unitName" class="col-form-label">Unit Name *</label>
+                <input type="text" class="form-control" id="unitName" name="unitName" required placeholder="Unit Name">
+            </div>
+                <div class="col-md-6 form-group mb-5">
+                    <label for="year" class="col-form-label">Year *</label>
+                    <input type="number" class="form-control" id="year" name="year" required placeholder="Year">
+                </div>
+                
+                <div class="col-md-6 form-group mb-5">
+                    <label for="month" class="col-form-label">Month *</label>
+                    <input type="number" class="form-control" id="month" name="month" required placeholder="Month">
+                </div>
+                  
+              <div class="col-md-6 form-group mb-5">
+                  <label for="firNo" class="col-form-label">FIR No *</label>
+                  <input type="text" class="form-control" id="firNo" name="firNo" required placeholder="FIR No">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                <label for="ComplaintName" class="col-form-label">Complaint Name *</label>
+                <input type="text" class="form-control" id="ComplaintName" name="ComplaintName" required placeholder="Complaint Name">
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="Age" class="col-form-label">Age *</label>
+                <input type="number" class="form-control" id="Age" name="Age" required>
+            </div>
+            
+              <div class="col-md-6 form-group mb-5">
+                <label for="Sex" class="col-form-label">Sex *</label>
+                <select class="form-control" id="Sex" name="Sex" required>
+                    <option value="" disabled selected>Select Sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="Nationality_Name" class="col-form-label">Nationality *</label>
+                <input type="text" class="form-control" id="Nationality_Name" name="Nationality_Name" required placeholder="Nationality Name">
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="Profession" class="col-form-label">Profession *</label>
+                <input type="text" class="form-control" id="Profession" name="Profession" required placeholder="Profession">
+            </div>
+         
+            <div class="col-md-6 form-group mb-5">
+                <label for="Address" class="col-form-label">Address *</label>
+                <textarea class="form-control" id="Address" name="Address" required placeholder="Address" rows="2" cols="50"></textarea>
+            </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="City" class="col-form-label">City *</label>
+                  <input type="text" class="form-control" id="City" name="City" required>
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="State" class="col-form-label">State *</label>
+                  <input type="text" class="form-control" id="State" name="State" required>
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Pincode" class="col-form-label">Pincode *</label>
+                <input type="number" class="form-control" id="Pincode" name="Pincode" required >
+            </div>
+            
+              <div class="col-md-6 form-group mb-5">
+                <label for="Caste" class="col-form-label">Caste *</label>
+                <input type="text" class="form-control" id="Caste" name="Caste" required placeholder="Caste">
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                <label for="Religion" class="col-form-label">Religion *</label>
+                <input type="text" class="form-control" id="Religion" name="Religion" required placeholder="Religion">
+            </div>
+            
+            <div class="col-md-6 form-group mb-5">
+                  <label for="FIR_ID" class="col-form-label">FIRID *</label>
+                  <input type="text" class="form-control" id="FIR_ID" name="FIR_ID" required placeholder="FIR ID">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                  <label for="Unit_ID" class="col-form-label">UnitID *</label>
+                  <input type="text" class="form-control" id="Unit_ID" name="Unit_ID" required placeholder="Unit ID">
+              </div>
+              
+              <div class="col-md-6 form-group mb-5">
+                <label for="Complaint_ID" class="col-form-label">ComplaintID *</label>
+                <input type="text" class="form-control" id="Complaint_ID" name="Complaint_ID" required placeholder="Complaint ID">
+            </div>
+            
+              <div class="col-md-12 form-group mb-5">
+                  <input type="submit" class="btn btn-primary" value="Submit">
+              </div>              
+          </div>
+
+      </div>
+    </div>
+
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Police Portal - FIR Form</title>
+  </head>
+  <body>
+  
+  <div class="content">
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+        <div class="form h-100">
+          <h3>Police Portal - FIR Form</h3>
+          <form id="firForm" action="/FIR1" method="post">
+            <div class="row">
+              <div class="col-md-6 form-group mb-5">
+                <label for="District_Name" class="col-form-label">District Name *</label>
+                <input type="text" class="form-control" id="District_Name" name="District_Name" required placeholder="District Name">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="UnitName" class="col-form-label">Unit Name *</label>
+                <input type="text" class="form-control" id="UnitName" name="UnitName" required placeholder="Unit Name">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="FIRNo" class="col-form-label">FIR No *</label>
+                <input type="text" class="form-control" id="FIRNo" name="FIRNo" required placeholder="FIR No">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="RI" class="col-form-label">RI *</label>
+                <input type="text" class="form-control" id="RI" name="RI" required placeholder="RI">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Year" class="col-form-label">Year *</label>
+                <input type="number" class="form-control" id="Year" name="Year" required placeholder="Year">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Month" class="col-form-label">Month *</label>
+                <input type="number" class="form-control" id="Month" name="Month" required placeholder="Month">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Offence_From_Date" class="col-form-label">Offence From Date *</label>
+                <input type="date" class="form-control" id="Offence_From_Date" name="Offence_From_Date" required>
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Offence_To_Date" class="col-form-label">Offence To Date *</label>
+                <input type="date" class="form-control" id="Offence_To_Date" name="Offence_To_Date" required>
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="FIR_Reg_DateTime" class="col-form-label">FIR Reg DateTime *</label>
+                <input type="datetime-local" class="form-control" id="FIR_Reg_DateTime" name="FIR_Reg_DateTime" required>
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="FIR_Date" class="col-form-label">FIR Date *</label>
+                <input type="date" class="form-control" id="FIR_Date" name="FIR_Date" required>
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="FIR_Type" class="col-form-label">FIR Type *</label>
+                <input type="text" class="form-control" id="FIR_Type" name="FIR_Type" required placeholder="FIR Type">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="FIR_Stage" class="col-form-label">FIR Stage *</label>
+                <input type="text" class="form-control" id="FIR_Stage" name="FIR_Stage" required placeholder="FIR Stage">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Complaint_Mode" class="col-form-label">Complaint Mode *</label>
+                <input type="text" class="form-control" id="Complaint_Mode" name="Complaint_Mode" required placeholder="Complaint Mode">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="CrimeGroup_Name" class="col-form-label">Crime Group Name *</label>
+                <input type="text" class="form-control" id="CrimeGroup_Name" name="CrimeGroup_Name" required placeholder="Crime Group Name">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="CrimeHead_Name" class="col-form-label">Crime Head Name *</label>
+                <input type="text" class="form-control" id="CrimeHead_Name" name="CrimeHead_Name" required placeholder="Crime Head Name">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Latitude" class="col-form-label">Latitude *</label>
+                <input type="number" step="0.000001" class="form-control" id="Latitude" name="Latitude" required placeholder="Latitude">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Longitude" class="col-form-label">Longitude *</label>
+                <input type="number" step="0.000001" class="form-control" id="Longitude" name="Longitude" required placeholder="Longitude">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="ActSection" class="col-form-label">Act Section *</label>
+                <input type="text" class="form-control" id="ActSection" name="ActSection" required placeholder="Act Section">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="IOName" class="col-form-label">IO Name *</label>
+                <input type="text" class="form-control" id="IOName" name="IOName" required placeholder="IO Name">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="KGID" class="col-form-label">KGID *</label>
+                <input type="text" class="form-control" id="KGID" name="KGID" required placeholder="KGID">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="IOAssigned_Date" class="col-form-label">IO Assigned Date *</label>
+                <input type="date" class="form-control" id="IOAssigned_Date" name="IOAssigned_Date" required>
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Internal_IO" class="col-form-label">Internal IO *</label>
+                <input type="text" class="form-control" id="Internal_IO" name="Internal_IO" required placeholder="Internal IO">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Place_of_Offence" class="col-form-label">Place of Offence *</label>
+                <input type="text" class="form-control" id="Place_of_Offence" name="Place_of_Offence" required placeholder="Place of Offence">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Distance_from_PS" class="col-form-label">Distance from PS *</label>
+                <input type="text" class="form-control" id="Distance_from_PS" name="Distance_from_PS" required placeholder="Distance from PS">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Beat_Name" class="col-form-label">Beat Name *</label>
+                <input type="text" class="form-control" id="Beat_Name" name="Beat_Name" required placeholder="Beat Name">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Village_Area_Name" class="col-form-label">Village Area Name *</label>
+                <input type="text" class="form-control" id="Village_Area_Name" name="Village_Area_Name" required placeholder="Village Area Name">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Male" class="col-form-label">Male *</label>
+                <input type="number" class="form-control" id="Male" name="Male" required placeholder="Male">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Female" class="col-form-label">Female *</label>
+                <input type="number" class="form-control" id="Female" name="Female" required placeholder="Female">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Boy" class="col-form-label">Boy *</label>
+                <input type="number" class="form-control" id="Boy" name="Boy" required placeholder="Boy">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Girl" class="col-form-label">Girl *</label>
+                <input type="number" class="form-control" id="Girl" name="Girl" required placeholder="Girl">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Age_0" class="col-form-label">Age 0 *</label>
+                <input type="number" class="form-control" id="Age_0" name="Age_0" required placeholder="Age 0">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="VICTIM_COUNT" class="col-form-label">Victim Count *</label>
+                <input type="number" class="form-control" id="VICTIM_COUNT" name="VICTIM_COUNT" required placeholder="Victim Count">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Accused_Count" class="col-form-label">Accused Count *</label>
+                <input type="number" class="form-control" id="Accused_Count" name="Accused_Count" required placeholder="Accused Count">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Arrested_Male" class="col-form-label">Arrested Male *</label>
+                <input type="number" class="form-control" id="Arrested_Male" name="Arrested_Male" required placeholder="Arrested Male">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Arrested_Female" class="col-form-label">Arrested Female *</label>
+                <input type="number" class="form-control" id="Arrested_Female" name="Arrested_Female" required placeholder="Arrested Female">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Arrested_Count_No" class="col-form-label">Arrested Count No. *</label>
+                <input type="number" class="form-control" id="Arrested_Count_No" name="Arrested_Count_No" required placeholder="Arrested Count No.">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Accused_ChargeSheeted_Count" class="col-form-label">Accused ChargeSheeted Count *</label>
+                <input type="number" class="form-control" id="Accused_ChargeSheeted_Count" name="Accused_ChargeSheeted_Count" required placeholder="Accused ChargeSheeted Count">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Conviction_Count" class="col-form-label">Conviction Count *</label>
+                <input type="number" class="form-control" id="Conviction_Count" name="Conviction_Count" required placeholder="Conviction Count">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="FIR_ID" class="col-form-label">FIR ID *</label>
+                <input type="text" class="form-control" id="FIR_ID" name="FIR_ID" required placeholder="FIR ID">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Unit_ID" class="col-form-label">Unit ID *</label>
+                <input type="text" class="form-control" id="Unit_ID" name="Unit_ID" required placeholder="Unit ID">
+              </div>
+              <div class="col-md-6 form-group mb-5">
+                <label for="Crime_No" class="col-form-label">Crime No *</label>
+                <input type="text" class="form-control" id="Crime_No" name="Crime_No" required placeholder="Crime No">
+              </div>
+              <div class="col-md-12 form-group mb-5">
+                <button type="submit">Submit</button>
+              </div>              
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+
+  </body>
+</html>

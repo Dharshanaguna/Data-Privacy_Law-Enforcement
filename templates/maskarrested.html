@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Masking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="col-sm-12 cv-cont">
+                <div class="header row">
+                    <h2>Data Masking Selection</h2>
+                </div>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="cv-port row">
+                            <div class="col-md-4">
+                                <div class="cv-info">
+                                    <div class="cvp">
+                                        <h6>Sensitive Data</h6>
+                                    </div>
+                                    <h6 class="skillc"></h6>
+                                    <div class="skp">
+                                        <h1>Law/Regulation Prediction</h1>
+                                        <form action="/predict" method="post">
+                                            <label for="attribute">Enter Field/Attribute Name:</label>
+                                            <input type="text" id="attribute" name="attribute" required>
+                                            <button type="submit">Predict</button>
+                                        </form>
+                                        {% if prediction %}
+                                            <h2>Prediction Results</h2>
+                                            <p><strong>Attribute:</strong> {{ attribute }}</p>
+                                            <p><strong>Predicted Law/Regulation:</strong> {{ prediction }}</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="cv-stail row">
+                                    <div class="col-sm-4 vbhfg center">
+                                        <img src="{{ url_for('static', filename='mask.png') }}" alt=""> <br>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h2>Jimmy Anderson</h2>
+                                        <h4>TNMDU2003</h4>
+                                    </div>
+                                </div>
+                                <div class="jumbo-address row">
+                                    <div class="row w-100 no-margin">
+                                        <div class="col-lg-6 no-padding">
+                                            <form action="/maskarrested" method="post">
+                                                <table class="addrss-list">
+                                                    <tbody>
+                                                        <!-- Dynamically generate checkboxes for form attributes -->
+                                                        {% for key, value in form_data.items() %}
+                                                        <tr>
+                                                            <th>
+                                                                <label for="{{ key }}">{{ key.replace('_', ' ') }}</label>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" id="{{ key }}" name="{{ key }}" value="{{ value }}">
+                                                                <input type="checkbox" id="mask_{{ key }}" name="mask_{{ key }}" value="mask_{{ key }}">
+                                                                <label for="mask_{{ key }}">Mask</label>
+                                                            </td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                                <button type="submit">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</html>
